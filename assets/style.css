@@ -11,7 +11,7 @@ body {
     font-size: 40px;
     font-family:Italic;
     color: whitesmoke;
-    height: 100px;
+    height: 200px;
     background-color: rgb(21, 21, 128);
 }
 
@@ -20,5 +20,25 @@ body {
     margin-right:10px;
     height: 100px;
     width: 100px;
+}
 
+.jumbotron {
+    margin-top:30px;
+    background-image: url("./opened-book.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    font-family: "Sofia", sans-serif;
+    color: white;
+}
+
+#dropdown{
+    display: flex;
+    padding: 0px;
+    justify-content: space-evenly;
+    align-items: center;
+    
 }
