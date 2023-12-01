@@ -12,6 +12,53 @@
 </head>
 
 <body>
+    <header class="container-fluid text-center text-white bg-dark-blue p-2 weather-header box">
+    
+     <h1><image class="tukan" src="./assets/TrioTukan.png" alt="An african bird with a long and wide nose"></image>TrioTukan</h1>
+    </header>
+<!-- jumbotron  -->
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3 jumbotron">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">TrioTukan Introduction</h1>
+          <p class="col-md-8 fs-4">Hello! Welcome to our page. Below you will find a program that could help you better understand the words definitions and how to pronunce the words in the language you've selected. You can also press the volume button to hear the pronunciation. </p>
+        </div>
+      </div>
+      <section id="dropdown">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+         English
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Italian</a></li>
+          <li><a class="dropdown-item" href="#">Spanish</a></li>
+          <li><a class="dropdown-item" href="#">Greek</a></li>
+        </ul>
+      </div>
+      <div class="button">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Definition
+        </button>
+      </div>
+    </section>
+
+    <section id = "definitionBox">
+      <div class = "box1"> Word:
+        <input class="form-control form-control-md" id="form-input" type="text" aria-label=".form-control-lg example"> <button class ='search-button'>Search </button>
+      </div>
+      <div class="definition"></div>
+      <div>Translation</div>
+    </section>
+
+  <section id ="translate">
+    <h1>Translator</h1>
+    <label for="inputText">Enter text to translate:</label>
+    <input type="text" id="inputText" placeholder="Type your text here">
+    <button onclick="translateText()">Translate</button>
+    <div id="result"></div>
+  </section>
+=======
+
+<body>
   <header class="container-fluid text-center text-white bg-dark-blue p-2 weather-header box">
 
     <h1>
@@ -75,6 +122,7 @@
     <button>Like</button>
     <button>Dislike</button>
   </div>
+
 
 
 
