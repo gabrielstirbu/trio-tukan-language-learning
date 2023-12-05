@@ -13,27 +13,84 @@
 
 <body>
 
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary customNav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./assets/pictures/TrioTukan copy 2.png">TrioTukan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#presentation">Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#form-input">Start learning</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End navigation bar -->
+
+  <!-- Hero Section -->
+  <section class="hero-banner" id="presentation">
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3 jumbotron">
+      <div class="container-fluid py-5 jumboCopy">
+        <h1 class="display-5 fw-bold">TrioTukan Introduction</h1>
+        <p class="col-md-12 fs-4">Welcome to our page. Below you will find a program that could help you better
+          understand the words definitions and how to pronunce the words in the language you've selected. You can also
+          press the volume button to hear the pronunciation.</p>
+      </div>
+    </div>
+  </section>
+  <!--End Hero Section-->
+
+  <!-- About -->
+  <div class="row">
+    <section class="page-section about" id="about">
+      <h2>About Us</h2>
+      <h3>TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</h3>
+    </section>
+  </div>
+  <!-- End Contact/ About me-->
+
   <div>
     <label for="form-input">Word:</label>
     <input type="text" id="form-input" placeholder="Enter a word">
     <button class="search-button">Search</button>
   </div>
 
-  <div class="definition">
-    <h2>Definition:</h2>
-    <p id="definition"></p>
+  <div class="row">
+    <section class="page-section definition-container">
+      <h2>Definition:</h2>
+      <p id="definition"></p>
+    </section>
   </div>
 
-  <div>
-    <h2>Translation:</h2>
-    <p id="result"></p>
+  <div class="row">
+    <section class="page-section translation-container">
+      <h2>Translation:</h2>
+      <p id="result"></p>
+    </section>
   </div>
 
-  <h2>Speech-to-Text</h2>
-  <p>Click the "Start" button and begin speaking. Click the "Stop" button to end recognition.</p>
-  <button id="startButton">Start Speech Recognition</button>
-  <button id="stopButton" disabled>Stop Speech Recognition</button>
-  <p id="transcription"></p>
+  <div class="row">
+    <section class="page-section speech-to-text-container">
+      <h2>Speech-to-Text</h2>
+      <p class="speech-instructions">Click the "Start" button and begin speaking. Click the "Stop" button to end
+        recognition.</p>
+      <button id="startButton">Start Speech Recognition</button>
+      <button id="stopButton" disabled>Stop Speech Recognition</button>
+      <p id="transcription"></p>
+    </section>
+  </div>
+
 
 
   <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
@@ -46,5 +103,14 @@
     crossorigin="anonymous"></script>
   <script src="./assets/script.js"></script>
 </body>
+
+<!--FOOTER -->
+<footer>
+  <div class="container" id="rights">
+    <p>&copy; TrioTukan 2023.</p>
+
+  </div>
+</footer>
+<!--End FOOTER -->
 
 </html>
