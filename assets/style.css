@@ -16,7 +16,8 @@ body {
 .customNav {
     position: fixed;
     width: 100%;
-    background-image: linear-gradient(to bottom right, rgb(69, 102, 69), rgb(122, 156, 94)) !important;
+    /* background-image: linear-gradient(to bottom right, rgb(69, 102, 69), rgb(122, 156, 94)) !important; */
+    background-image: url("./pictures/Screenshot\ 2023-12-05\ at\ 04.48.41.png");
     background-size: cover;
     z-index: 10;
 }
@@ -53,6 +54,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
+}
+
+.birdOne {
+    width: 20%;
+    position: absolute;
+    bottom: -100px;
+    left: -20px;
+
+}
+
+.birdTwo {
+    width: 20%;
+    position: absolute;
+    top: 50px;
+    right: 30px;
 }
 
 /* Jumbotron copy */
@@ -67,7 +84,7 @@ body {
 .container p {
     margin-top: 15px;
     text-align: center;
-    background-image: linear-gradient(to bottom right, rgb(69, 102, 69), rgb(122, 156, 94));
+    background-image: url("./pictures/Screenshot\ 2023-12-05\ at\ 04.48.41.png");
     border-radius: 25px;
     width: 15%;
     margin: auto;
@@ -77,8 +94,15 @@ body {
 /* About Section */
 .page-section.about {
     padding: 50px 0;
-    background-color: #c7e4c3;
-    /* Light green background color */
+    background-color: #acd4a7;
+    border-radius: 5px;
+}
+
+.birdThree {
+    width: 20%;
+    position: absolute;
+    top: auto;
+    right: 10px;
 }
 
 .page-section.about h2 {
@@ -203,7 +227,8 @@ footer {
 
 .definition-container,
 .translation-container,
-.speech-to-text-container {
+.speech-to-text-container,
+.word-container {
     margin-bottom: 20px;
     padding: 20px;
     border: 1px solid #ccc;
