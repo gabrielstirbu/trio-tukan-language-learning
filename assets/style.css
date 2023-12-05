@@ -1,56 +1,266 @@
-body {
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
     padding: 0;
-    margin: 0;
 }
 
-.box {
-    display: flex;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    font-family: Italic;
-    color: whitesmoke;
-    height: 200px;
-    background-color: rgb(21, 21, 128);
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f0f0f0;
+    /* Light background color */
 }
 
-.tukan {
-    margin-top: 20px;
-    margin-right: 10px;
-    height: 100px;
-    width: 100px;
+/* Navigation bar */
+.customNav {
+    position: fixed;
+    width: 100%;
+    /* background-image: linear-gradient(to bottom right, rgb(69, 102, 69), rgb(122, 156, 94)) !important; */
+    background-image: url("./pictures/Screenshot\ 2023-12-05\ at\ 04.48.41.png");
+    background-size: cover;
+    z-index: 10;
 }
 
+.navbar-nav {
+    margin-left: auto;
+    margin-right: 0 !important;
+}
+
+.navbar-brand img {
+    padding-right: 15px;
+    width: 55px;
+}
+
+.nav-item {
+    margin: 0px 15px;
+}
+
+/* Hover Nav property */
+.nav-link {
+    transition: all 1s;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid sandybrown;
+}
+
+/* Jumbotron  */
 .jumbotron {
-    margin-top: 30px;
-    background-image: url("./opened-book.png");
+    background-image: url('./pictures/tropical-palm-leaves-pattern-background-green-monstera-tree-foliage-decoration-design-plant-with-exotic-leaf-closeup.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    height: calc(100vh - 25px);
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: left;
-    font-family: "Sofia", sans-serif;
-    color: white;
-}
-
-#dropdown {
-    display: flex;
-    padding: 0px;
-    justify-content: space-evenly;
     align-items: center;
+    border-radius: 5px;
+}
+
+.birdOne {
+    width: 20%;
+    position: absolute;
+    bottom: -100px;
+    left: -20px;
 
 }
 
-.button {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 6px;
-    margin: 6px;
+.birdTwo {
+    width: 20%;
+    position: absolute;
+    top: 50px;
+    right: 30px;
 }
 
-button:hover {
-    background-color: chocolate;
+/* Jumbotron copy */
+.jumboCopy {
+    width: 70%;
+    min-width: 500px;
+    max-width: 700px;
+    text-align: center;
+    color: #e9ecef;
+}
+
+.container p {
+    margin-top: 15px;
+    text-align: center;
+    background-image: url("./pictures/Screenshot\ 2023-12-05\ at\ 04.48.41.png");
+    border-radius: 25px;
+    width: 15%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+/* About Section */
+.page-section.about {
+    padding: 50px 0;
+    background-color: #acd4a7;
+    border-radius: 5px;
+}
+
+.birdThree {
+    width: 20%;
+    position: absolute;
+    top: auto;
+    right: 10px;
+}
+
+.page-section.about h2 {
+    font-size: 36px;
+    color: #333d29;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-section.about h3 {
+    font-size: 24px;
+    color: #333d29;
+    text-align: center;
+}
+
+/* Search and Definition Section */
+.row {
+    margin: 30px 0;
+}
+
+#form-input {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #333d29;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background: linear-gradient(to bottom right, #336633, #234d23);
+    /* Gradient from dark green to a darker shade */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+.search-button:hover {
+    background: linear-gradient(to bottom right, #234d23, #336633);
+    /* Reverse gradient on hover */
+}
+
+.definition {
+    margin-top: 20px;
+}
+
+.definition h2 {
+    color: #333d29;
+}
+
+.definition p {
+    color: #333d29;
+}
+
+/* Translation Section */
+h2 {
+    color: #333d29;
+}
+
+#result {
+    color: #333d29;
+}
+
+/* Speech-to-Text Section */
+h2 {
+    color: #333d29;
+}
+
+p {
+    color: #d3ee27;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.5);
+    /* Add a subtle text shadow */
+}
+
+#transcription {
+    color: #333d29;
+}
+
+/* Buttons styling */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+#startButton {
+    background: linear-gradient(to bottom right, #336633, #234d23);
+    color: #ffffff;
+}
+
+#startButton:hover {
+    background: linear-gradient(to bottom right, #234d23, #336633);
+}
+
+#stopButton {
+    background: linear-gradient(to bottom right, #993333, #661a1a);
+    color: #ffffff;
+}
+
+#stopButton:hover {
+    background: linear-gradient(to bottom right, #661a1a, #993333);
+}
+
+.speech-instructions {
+    color: forestgreen;
+    font-weight: bold;
+}
+
+/* Footer Section */
+footer {
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.definition-container,
+.translation-container,
+.speech-to-text-container,
+.word-container {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Style the headings within the containers */
+.definition-container h2,
+.translation-container h2,
+.speech-to-text-container h2 {
+    color: #333d29;
+}
+
+/* Style the buttons within the Speech-to-Text container */
+#startButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom right, #336633, #234d23);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#startButton:hover,
+#stopButton:hover {
+    background: linear-gradient(to bottom right, #234d23, #336633);
+}
+
+/* Add spacing between paragraphs and transcription text */
+.speech-to-text-container p,
+.speech-to-text-container #transcription {
+    margin-bottom: 10px;
 }
