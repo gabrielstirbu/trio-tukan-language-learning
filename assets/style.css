@@ -17,7 +17,7 @@ body {
     position: fixed;
     width: 100%;
     /* background-image: linear-gradient(to bottom right, rgb(69, 102, 69), rgb(122, 156, 94)) !important; */
-    background-image: url("./pictures/Screenshot\ 2023-12-05\ at\ 04.48.41.png");
+    background-image: url("./Screenshot\ 2023-12-05\ at\ 04.48.41.png");
     background-size: cover;
     z-index: 10;
 }
@@ -47,7 +47,7 @@ body {
 
 /* Jumbotron  */
 .jumbotron {
-    background-image: url('./pictures/tropical-palm-leaves-pattern-background-green-monstera-tree-foliage-decoration-design-plant-with-exotic-leaf-closeup.jpg');
+    background-image: url('./tropical-palm-leaves-pattern-background-green-monstera-tree-foliage-decoration-design-plant-with-exotic-leaf-closeup.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: calc(100vh - 25px);
@@ -84,7 +84,7 @@ body {
 .container p {
     margin-top: 15px;
     text-align: center;
-    background-image: url("./pictures/Screenshot\ 2023-12-05\ at\ 04.48.41.png");
+    background-image: url("./Screenshot\ 2023-12-05\ at\ 04.48.41.png");
     border-radius: 25px;
     width: 15%;
     margin: auto;
