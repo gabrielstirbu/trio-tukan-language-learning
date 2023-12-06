@@ -15,7 +15,7 @@ $('.search-button').on('click', function displayDefinition(event) {
   fetch(queryURL, {
       method: 'GET',
       headers: {
-          'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com',
+          'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com', // the domain of the web API
           'X-RapidAPI-Key': apiKey,
       },
   })
@@ -26,10 +26,9 @@ $('.search-button').on('click', function displayDefinition(event) {
           // Display the definition in the UI
           var definitionDiv = $('.definition');
           $('#definition').empty();
-          $('.definition').empty();
 
           var definitionData = data.results[0].definition;
-          var defP = $("<p id='definition'>").text("Definition of the word " + word + " is " + definitionData);
+          var defP = $("#definition").text("Definition of the word " + word + " is " + definitionData);
           definitionDiv.append(defP);
 
           // Store the definition text in localStorage
@@ -69,18 +68,12 @@ function translateText(textToTranslate) {
       body: bodyData
   };
 
-  // Log the details of the API request for debugging purposes
-  console.log('API Request:', { url, options });
-
   // Make the API request using the fetch function
   fetch(url, options)
       .then(response => response.json())
       .then(resultJSON => {
           // Extract the translation from the JSON response
           var translation = resultJSON.data.translations[0].translatedText;
-
-          // Log the translation for debugging purposes
-          console.log('Translation:', translation);
 
           // Display the translation in the 'result' div of the HTML
           $('#result').text(translation);
@@ -94,16 +87,18 @@ function translateText(textToTranslate) {
       });
 }
 
-// Speech Recognition
+// Speech Recognition if statement
 if ('webkitSpeechRecognition' in window) {
-  const recognition = new webkitSpeechRecognition();
+
+  var recognition = new webkitSpeechRecognition();
+  // creates a new instance in the dom called using webkit and speech recognition API
   recognition.continuous = true;
   recognition.interimResults = true;
   recognition.lang = 'es'; // Set the language to Spanish
 
-  const startButton = document.getElementById('startButton');
-  const stopButton = document.getElementById('stopButton');
-  const transcription = document.getElementById('transcription');
+  var startButton = document.getElementById('startButton');
+  var stopButton = document.getElementById('stopButton');
+  var transcription = document.getElementById('transcription');
 
   // Event listener for starting speech recognition
   startButton.addEventListener('click', () => {
@@ -123,13 +118,8 @@ if ('webkitSpeechRecognition' in window) {
 
   // Event listener for speech recognition results
   recognition.onresult = function (event) {
-      const transcript = event.results[0][0].transcript;
+      var transcript = event.results[0][0].transcript;
       transcription.textContent = 'Speech recognized: ' + transcript;
-  };
-
-  // Event listener for speech recognition errors
-  recognition.onerror = function (event) {
-      console.error('Speech recognition error:', event.error);
   };
 
   // Event listener for the end of speech recognition

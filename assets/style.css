@@ -175,10 +175,14 @@ h2 {
 }
 
 p {
-    color: #d3ee27;
+    color: #13150b;
     margin-bottom: 20px;
     text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.5);
     /* Add a subtle text shadow */
+}
+
+#welcome{
+    color: #d3ee27;
 }
 
 #transcription {
