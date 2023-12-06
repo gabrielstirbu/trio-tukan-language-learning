@@ -101,7 +101,7 @@ body {
 .birdThree {
     width: 20%;
     position: absolute;
-    top: auto;
+    bottom: -400px;
     right: 10px;
 }
 
@@ -116,6 +116,28 @@ body {
     font-size: 24px;
     color: #333d29;
     text-align: center;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px;
+    border-top: 10px black;
+}
+.english {
+    margin-left: 30%;
+}
+.spanish {
+    margin-right: 30%;
+}
+.language button {
+    color: black;
+}
+.language p {
+    color: black;
+    align-items: center;
+    padding-top: 20px;
 }
 
 /* Search and Definition Section */
@@ -136,7 +158,6 @@ body {
     background: linear-gradient(to bottom right, #336633, #234d23);
     /* Gradient from dark green to a darker shade */
     color: #ffffff;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -192,7 +213,6 @@ p {
 /* Buttons styling */
 button {
     cursor: pointer;
-    border: none;
     border-radius: 5px;
     padding: 10px 20px;
 }
@@ -218,6 +238,21 @@ button {
 .speech-instructions {
     color: forestgreen;
     font-weight: bold;
+}
+
+/* button  */
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin: 6px;
+}
+#like {
+    background-color: green;
+}
+#dislike {
+    background-color: red;
 }
 
 /* Footer Section */
@@ -252,7 +287,7 @@ footer {
     padding: 10px 20px;
     background: linear-gradient(to bottom right, #336633, #234d23);
     color: #ffffff;
-    border: none;
+    /* border: none; */
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;

@@ -52,6 +52,8 @@ function translateText(textToTranslate) {
 
   // Create a URLSearchParams object to handle the request body
   var bodyData = new URLSearchParams();
+    // new URLSearchParam - creates a new instance to redifine the parameters for the API search.
+  // url + q + textToTranslate + source + en + target + es 
   bodyData.append('q', textToTranslate);
   bodyData.append('source', 'en');
   bodyData.append('target', 'es');
@@ -71,6 +73,7 @@ function translateText(textToTranslate) {
   // Make the API request using the fetch function
   fetch(url, options)
       .then(response => response.json())
+      // takes the bulk information from the API and creates a readable object.
       .then(resultJSON => {
           // Extract the translation from the JSON response
           var translation = resultJSON.data.translations[0].translatedText;
@@ -92,8 +95,8 @@ if ('webkitSpeechRecognition' in window) {
 
   var recognition = new webkitSpeechRecognition();
   // creates a new instance in the dom called using webkit and speech recognition API
-  recognition.continuous = true;
-  recognition.interimResults = true;
+  recognition.continuous = true; // makes the speech recognition continously active.
+  recognition.interimResults = true;  // gives back the results whilst you keep talking
   recognition.lang = 'es'; // Set the language to Spanish
 
   var startButton = document.getElementById('startButton');
@@ -103,7 +106,7 @@ if ('webkitSpeechRecognition' in window) {
   // Event listener for starting speech recognition
   startButton.addEventListener('click', () => {
       recognition.start();
-      startButton.disabled = true;
+      startButton.disabled = true; // 
       stopButton.disabled = false;
       startButton.textContent = 'Listening...';
   });
