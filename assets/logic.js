@@ -9,7 +9,7 @@ $('.search-button').on('click', function displayDefinition(event) {
   var queryURL = 'https://wordsapiv1.p.rapidapi.com/words/' + word;
 
   // Add your RapidAPI key for authentication
-  var apiKey = ''; // ADD WORD KEY (FROM RADU)
+  var apiKey = 'd369bb24d5mshf62ee822d5e4068p1c525djsn86e8ff53feb8'; // ADD WORD KEY (FROM RADU)
 
   // Make a fetch request to get word definition
   fetch(queryURL, {
@@ -48,7 +48,7 @@ function translateText(textToTranslate) {
   var url = 'https://google-translate1.p.rapidapi.com/language/translate/v2';
 
   // Add your RapidAPI key for translation
-  var apiKey = 'ae209b95admsh4eef2680dd17bb9p1916c2jsn3ab3fd38ead0'; // ADD MY KEY FOR TRANSLATE
+  var apiKey = '2e13952d57msh0b9a07691f3383ep15d154jsn3c910cbadbe9'; // ADD MY KEY FOR TRANSLATE
 
   // Create a URLSearchParams object to handle the request body
   var bodyData = new URLSearchParams();
