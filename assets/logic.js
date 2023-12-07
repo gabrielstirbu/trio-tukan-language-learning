@@ -48,7 +48,7 @@ function translateText(textToTranslate) {
   var url = 'https://google-translate1.p.rapidapi.com/language/translate/v2';
 
   // Add your RapidAPI key for translation
-  var apiKey = ''; // ADD MY KEY FOR TRANSLATE
+  var apiKey = '48fdf6a013msh2875caa8793d562p170376jsn735f22cc6562'; // ADD MY KEY FOR TRANSLATE
 
   // Create a URLSearchParams object to handle the request body
   var bodyData = new URLSearchParams();
